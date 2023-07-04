@@ -28,6 +28,20 @@ public class Consoler {
         System.out.println("next guess: ");
         return scanner.nextLine();
     }
+    public static String wrongAnswer2() {
+        String[] wrongResponses = new String[]{"Not quite, try again", "Wrong-o", "Incorrect guess", "No", "You got it...sike"};
+        int randomNum = random.nextInt(5);
+        System.out.println(wrongResponses[randomNum]);
+        System.out.println("next guess: ");
+        return scanner.nextLine();
+    }
+    public static String wrongAnswer3() {
+        String[] wrongResponses = new String[]{"Not quite, try again", "Wrong-o", "Incorrect guess", "No", "You got it...sike"};
+        int randomNum = random.nextInt(5);
+        System.out.println(wrongResponses[randomNum]);
+        System.out.println("next guess: ");
+        return scanner.nextLine();
+    }
 
     public static String winAnswer() {
         System.out.println("Winner (insert some cool winner art");
