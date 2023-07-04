@@ -13,15 +13,13 @@ public class Consoler {
 
     public static String getGuess(){
         System.out.println("Guess the word");
-        String input = scanner.nextLine();
-        return input;
+        return scanner.nextLine();
     }
 
     public static String gameIntro(){
         System.out.println("Welcome to Hangman" + "\n" + "You will have 3 chances to guess a 5 letter word");
         System.out.println("Type any letter to begin");
-        String input = scanner.nextLine();
-        return input;
+        return scanner.nextLine();
     }
 
 
@@ -30,8 +28,13 @@ public class Consoler {
         int randomNum = random.nextInt(5) + 1;
         System.out.println(wrongResponses[randomNum]);
         System.out.println("next guess: ");
-        String input = scanner.nextLine();
-        return input;
+        return scanner.nextLine();
+    }
+
+    public static String winAnswer(){
+        System.out.println("Fill in a fancy win message here!");
+        System.out.println("Play again?");
+        return scanner.nextLine();
     }
 
 
