@@ -10,8 +10,17 @@ public class Consoler {
 
 
     public static String getGuess() {
-        System.out.println("Guess the word");
-        return scanner.nextLine();
+        String theGuess = "";
+        while(theGuess.length() != 5){
+
+            System.out.println("Guess the word");
+            theGuess = scanner.nextLine();
+            if(theGuess.length() != 5){
+                System.out.println("Invalid Entry. Your guess is not 5 letters.");
+            }
+        }
+
+        return theGuess;
     }
 
     public static String gameIntro() {
@@ -25,22 +34,22 @@ public class Consoler {
         String[] wrongResponses = new String[]{"Not quite, try again", "Wrong-o", "Incorrect guess", "No", "You got it...sike"};
         int randomNum = random.nextInt(5);
         System.out.println(wrongResponses[randomNum]);
-        System.out.println("next guess: ");
-        return scanner.nextLine();
+        System.out.println("Two remaining guesses: ");
+        return getGuess();
     }
     public static String wrongAnswer2() {
         String[] wrongResponses = new String[]{"Not quite, try again", "Wrong-o", "Incorrect guess", "No", "You got it...sike"};
         int randomNum = random.nextInt(5);
         System.out.println(wrongResponses[randomNum]);
-        System.out.println("next guess: ");
-        return scanner.nextLine();
+        System.out.println("Two guesses remaining");
+        return getGuess();
     }
     public static String wrongAnswer3() {
         String[] wrongResponses = new String[]{"Not quite, try again", "Wrong-o", "Incorrect guess", "No", "You got it...sike"};
         int randomNum = random.nextInt(5);
         System.out.println(wrongResponses[randomNum]);
-        System.out.println("next guess: ");
-        return scanner.nextLine();
+        System.out.println("1 guess left");
+        return getGuess();
     }
 
     public static String winAnswer() {

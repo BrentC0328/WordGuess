@@ -58,9 +58,8 @@ public class Hangman {
                         emptyWord.setCharAt(i, check1);
                     }
                 }
-                System.out.println(emptyWord);
+                System.out.println("\n" + emptyWord + "\n");
 
-                System.out.println("Two more guesses");
                 guess2 = Consoler.wrongAnswer2();
 
 
@@ -80,8 +79,7 @@ public class Hangman {
                             emptyWord.setCharAt(i, check1);
                         }
                     }
-                    System.out.println(emptyWord + "\n");
-                    System.out.println("One more guess");
+                    System.out.println("\n" + emptyWord + "\n");
                     guess3 = Consoler.wrongAnswer3();
                 }
 
